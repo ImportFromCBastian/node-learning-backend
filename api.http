@@ -1,0 +1,32 @@
+### get all movies
+GET http://localhost:3000/movies
+
+### get movie by id
+GET http://localhost:3000/movies/bd136977-e233-11ee-b248-920a7e583e31
+
+### get movies by genre
+GET http://localhost:3000/movies?genre=Action
+
+### create movie
+
+POST http://localhost:3000/movies
+Content-Type: application/json
+
+{
+  "tittle":"yokaiwacth",
+  "genre":["Sci-Fi"],
+  "year":2020,
+  "director":"Cristopher Nolan",
+  "duration":180,
+  "poster": "https://media.istockphoto.com/id/1470130937/photo/young-plants-growing-in-a-crack-on-a-concrete-footpath-conquering-adversity-concept.webp?b=1&s=170667a&w=0&k=20&c=IRaA17rmaWOJkmjU_KD29jZo4E6ZtG0niRpIXQN17fc="
+}
+
+### modify movie's year
+
+PATCH http://localhost:3000/movies/bd136977-e233-11ee-b248-920a7e583e31
+Content-Type: application/json
+
+{
+  "year": 2014,
+  "sql": "SELECT * FROM movie"
+}
